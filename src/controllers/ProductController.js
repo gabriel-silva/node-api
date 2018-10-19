@@ -15,7 +15,7 @@ module.exports = {
         return res.json(product);
     },
     async update(req, res){
-        //{new: true} retorna o produto atualizado para a variável atualizado.
+        //{new: true} retorna o produto atualizado para a variável product.
         var product = await Product.findByIdAndUpdate(req.params.id, req.body, {new: true});
         return res.json(product);
     },
